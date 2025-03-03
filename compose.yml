@@ -1,1 +1,15 @@
-Update this file to add the content
+version: "3"
+services:
+  personal_api:
+    image: "nandhakumarbm/22it026-personal-api-docker"
+    container_name: personal_api_container
+    restart: always
+    ports:
+      - "5003:5000"
+
+  ml_models:
+    image: "nandhakumarbm/22it026-ml-models-docker"
+    container_name: ml_models_container
+    restart: no
+    ports:
+      - "5004:5000"
